@@ -1,5 +1,9 @@
 import { getMyArticles } from "../fetchers";
 
+// ここでのテストは以下の3つ
+// ①指定したタグを持つ記事が1件もない場合、nullが返る
+// ②指定したタグを持つ記事が1件以上ある場合、リンク一覧が返る
+// ③データ取得に失敗した場合、例外がスローされる
 export async function getMyArticleLinksByCategory(category: string) {
   // データを取得する関数
   const data = await getMyArticles();
