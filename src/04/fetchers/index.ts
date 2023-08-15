@@ -3,6 +3,7 @@ import type { Article, ArticleInput, Articles, Profile } from "./type";
 async function handleResponse(res: Response) {
   const data = await res.json();
   if (!res.ok) {
+    // 200番台以外にレスポンスの場合
     throw data;
   }
   return data;
