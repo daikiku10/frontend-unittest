@@ -25,7 +25,10 @@ describe("四則演算", () => {
     test("引数が'0〜100'の範囲外だった場合、例外をスローする", () => {
       expect(() => sub(-10, 10)).toThrow(RangeError);
       expect(() => sub(10, -10)).toThrow(RangeError);
-      expect(() => sub(-10, 110)).toThrow(Error);
+      expect(() => sub(-10, 110)).toThrow(RangeError);
+      // expect(() => sub(-10, 110)).toThrow(Error);
+      // RangeErrorはErrorの派生クラスにあるため、成功してしまう。
+      // 意図としてはRangeErrorが期待されているため、RangeErrorを指定した方が適切
     });
   });
 });
