@@ -2,6 +2,7 @@ import { greet, sayGoodBye } from "./greet";
 
 jest.mock("./greet", () => ({
   ...jest.requireActual("./greet"),
+  // greet: (name: string) => undefined,
   sayGoodBye: (name: string) => `Good bye, ${name}.`,
 }));
 

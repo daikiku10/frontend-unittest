@@ -1,6 +1,7 @@
 import { greet, sayGoodBye } from "./greet";
 
 jest.mock("./greet", () => ({
+  // greet: (name: string) => 'aaa',
   sayGoodBye: (name: string) => `Good bye, ${name}.`,
 }));
 
