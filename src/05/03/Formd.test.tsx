@@ -25,3 +25,8 @@ test("ボタンを押下すると、イベントハンドラーが実行され�
   expect(mockFn).toHaveBeenCalled();
   expect(mockFn).toBeCalled();
 });
+
+test("Snapshot: アカウント名「taro」が表示される", () => {
+  const { container } = render(<Form name="taro" />);
+  expect(container).toMatchSnapshot();
+});
