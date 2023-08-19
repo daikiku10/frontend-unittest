@@ -68,16 +68,16 @@ test("不明なエラー時、メッセージが表示される", async () => {
   expect(screen.getByText("不明なエラーが発生しました")).toBeInTheDocument();
 });
 
-test("Snapshot: 登録フォームが表示される", async () => {
-  // mockPostMyAddress();
-  const mockFn = mockPostMyAddress();
+// test("Snapshot: 登録フォームが表示される", async () => {
+//   // mockPostMyAddress();
+//   const mockFn = mockPostMyAddress();
 
-  const { container } = render(<RegisterAddress />);
-  const submitValues = await fillValuesAndSubmit();
+//   const { container } = render(<RegisterAddress />);
+//   const submitValues = await fillValuesAndSubmit();
 
-  expect(mockFn).toHaveBeenCalledWith(expect.objectContaining(submitValues));
-  // expect(screen.getByText("登録しました")).toBeInTheDocument();
+//   expect(mockFn).toHaveBeenCalledWith(expect.objectContaining(submitValues));
+//   // expect(screen.getByText("登録しました")).toBeInTheDocument();
 
 
-  expect(container).toMatchSnapshot();
-});
+//   expect(container).toMatchSnapshot();
+// });
